@@ -17,4 +17,4 @@ This is an agglomeration of resources I have found while I try to educate myself
 This tutorial is a nice introduction to the Google Maps API, and the website has a WSIWYG interface where you can explore the HTML code on your own
 
 ##Tasks
-*[Finding Bounding Box parameters](//LearningWebMaps/GetBoundingBox.md)
+*[Finding Bounding Box parameters](/LearningWebMaps/GetBoundingBox.md)
