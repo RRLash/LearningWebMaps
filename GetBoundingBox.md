@@ -7,16 +7,22 @@ For the time being, I want to hard code the bounding box information for each co
 
 ```html
 http://nominatim.openstreetmap.org/search?country=Canada&format=xml
-  // "http://nominatim.openstreetmap.org/search?" is the geocoder URL
-  // "country=Canada" filters the results list to only features of type=country and name=Canada
-  // "&" the ampersand is a concatenation operator
-  // "format=json" declares that the results should be returned in an XML format
 ```
+  - "http://nominatim.openstreetmap.org/search?" is the geocoder URL
+  - "country=Canada" filters the results list to only features of type=country and name=Canada
+  - "&" the ampersand is a concatenation operator
+  - "format=json" declares that the results should be returned in an XML format
+
 When you enter the query string above into your internet browser, you will get the follow results:  
 
 ```XML
-This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<searchresults timestamp="Fri, 28 Aug 15 21:34:22 +0000" attribution="Data © OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright" querystring="Canada" polygon="false" exclude_place_ids="127863191" more_url="http://nominatim.openstreetmap.org/search.php?format=xml&exclude_place_ids=127863191&accept-language=en-US,en;q=0.8&q=Canada">
+<place place_id="127863191" osm_type="relation" osm_id="1428125" place_rank="4" boundingbox="41.6765556,83.3362128,-141.0027499,-52.323198" lat="61.0666922" lon="-107.9917071" display_name="Canada" class="boundary" type="administrative" importance="0.99909828419394" icon="http://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"/>
+</searchresults>
+```
+I have broken out the geocoding results fields from the XML code block above into separate lines in the code block below:
 
+```
 <searchresults timestamp="Fri, 28 Aug 15 21:34:22 +0000" 
 attribution="Data © OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright" 
 querystring="Canada" polygon="false" exclude_place_ids="127863191" more_url="http://nominatim.openstreetmap.org/search.php?format=xml&exclude_place_ids=127863191&accept-language=en-US,en;q=0.8&q=Canada">
@@ -34,7 +40,6 @@ querystring="Canada" polygon="false" exclude_place_ids="127863191" more_url="htt
   icon="http://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"/>
 </searchresults>
 
-<searchresults timestamp="Fri, 28 Aug 15 21:34:22 +0000" attribution="Data © OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright" querystring="Canada" polygon="false" exclude_place_ids="127863191" more_url="http://nominatim.openstreetmap.org/search.php?format=xml&exclude_place_ids=127863191&accept-language=en-US,en;q=0.8&q=Canada">
-<place place_id="127863191" osm_type="relation" osm_id="1428125" place_rank="4" boundingbox="41.6765556,83.3362128,-141.0027499,-52.323198" lat="61.0666922" lon="-107.9917071" display_name="Canada" class="boundary" type="administrative" importance="0.99909828419394" icon="http://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"/>
-</searchresults>
+
 ```
+From these results, I am then able to manually copy and paste the bounding box text string from the "boundingbox" field.
