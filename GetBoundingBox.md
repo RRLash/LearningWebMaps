@@ -5,7 +5,7 @@ Currently I'm playing with the HERE maps API.  This API has a method which can b
 
 For the time being, I want to hard code the bounding box information for each country page into the HTML, so I need to lookup the bounding box string for each country.  To get this information, I'm going to use the [Nominatim](http://wiki.openstreetmap.org/wiki/Nominatim) geocoder, which returns a bounding box field when a placename is queried (as well as a range of other information).  Since placenames can represent a variety of geographic localities, but I'm only interested in the bounding box around country polygons, I can modify the Nominatim HTML query to filter my results to only localities which have a type of country (excluding placenames that might be cities, streetnames, or buisness names).  This query has the following format
 
-```
+```html
 http://nominatim.openstreetmap.org/search?country=Canada&format=xml
   // "http://nominatim.openstreetmap.org/search?" is the geocoder URL
   // "country=Canada" filters the results list to only features of type=country and name=Canada
@@ -14,7 +14,7 @@ http://nominatim.openstreetmap.org/search?country=Canada&format=xml
 ```
 When you enter the query string above into your internet browser, you will get the follow results:  
 
-```
+```XML
 This XML file does not appear to have any style information associated with it. The document tree is shown below.
 
 <searchresults timestamp="Fri, 28 Aug 15 21:34:22 +0000" 
@@ -32,5 +32,9 @@ querystring="Canada" polygon="false" exclude_place_ids="127863191" more_url="htt
   type="administrative" 
   importance="0.99909828419394" 
   icon="http://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"/>
+</searchresults>
+
+<searchresults timestamp="Fri, 28 Aug 15 21:34:22 +0000" attribution="Data © OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright" querystring="Canada" polygon="false" exclude_place_ids="127863191" more_url="http://nominatim.openstreetmap.org/search.php?format=xml&exclude_place_ids=127863191&accept-language=en-US,en;q=0.8&q=Canada">
+<place place_id="127863191" osm_type="relation" osm_id="1428125" place_rank="4" boundingbox="41.6765556,83.3362128,-141.0027499,-52.323198" lat="61.0666922" lon="-107.9917071" display_name="Canada" class="boundary" type="administrative" importance="0.99909828419394" icon="http://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"/>
 </searchresults>
 ```
