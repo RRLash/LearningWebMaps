@@ -12,8 +12,8 @@ This is an agglomeration of resources I have found while I try to educate myself
 ##Software
 *[Mapbox Studio](https://www.mapbox.com/mapbox-studio/#darwin): time to learn about styling vector tiles with CartoCSS for the best looking online maps ever using this desktop software.  
 *[Tilemill](https://www.mapbox.com/tilemill/docs/crashcourse/introduction/): Tilemill is no longer in development by Mapbox, having been replaced by Mapbox Studio, but it also used CartoCSS to style tiled web maps. It is worth knowing about though because Tilemill is still downloadable and  there are still a lot of example applications and tutorials around on the web for us beginners to work from.  
-*(CartoDB.com)[https://cartodb.com/]  
-*(ArcGIS Online)[https://www.arcgis.com/home/]  
+*[CartoDB.com](https://cartodb.com/)  
+*[ArcGIS Online](https://www.arcgis.com/home/)  
 *[CODEPEN](https:codepen.io) is a "playground for the front end side of the web." It is a web application that allows you to write/paste/edit HTML, CSS, and Javascript code that you might use to power an interactive web map.  It's real strength is the ability to share this code with others to enable more direct collaboration.
 
 
