@@ -5,6 +5,9 @@ This is an agglomeration of resources I have found while I try to educate myself
 *[Web Cartography: Map Design for Interactive and Mobile Devices](http://www.amazon.com/Web-Cartography-Design-Interactive-Devices/dp/1439876223), by Ian Muehlenhaus
 
 ##Articles
+*Roth, R., Donohue, R., Sack, C., Wallace, T., & Buckingham, T. (2015). [A Process for Keeping Pace with Evolving Web Mapping Technologies. Cartographic Perspectives](http://www.cartographicperspectives.org/index.php/journal/article/view/cp78-roth-et-al/1348), 0(78), 25-52. doi:10.14714/CP78.1273  
+
+![Matrix of web mapping software](http://www.cartographicperspectives.org/index.php/journal/article/viewFile/1273/1348/6196)
 
 ##Software
 *[Mapbox Studio](https://www.mapbox.com/mapbox-studio/#darwin): time to learn about styling vector tiles with CartoCSS for the best looking online maps ever using this desktop software.  
